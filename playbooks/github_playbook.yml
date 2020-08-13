@@ -1,0 +1,27 @@
+---
+- hosts: all
+
+  tasks:
+    - name: Creates directory
+      file:
+        path: ~/Projects
+        state: directory
+        mode: '0775'
+    - name: Clone cacheservice
+      git:
+        repo: https://github.com/vadymka1/cacheservice.git
+        dest: ~/Projects
+        accept_hostkey: yes
+        become: yes
+    - name: Clone ruby pinger
+      git:
+        repo: https://github.com/vadymka1/ruby-pinger.git
+        dest: ~/Projects
+        accept_hostkey: yes
+        become: yes
+    - name: Clone ruby jager-rd
+      git:
+        repo: https://github.com/vadymka1/jager-rd.git
+        dest: ~/Projects
+        accept_hostkey: yes
+        become: yes
