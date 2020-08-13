@@ -1,27 +1,30 @@
 ---
 - hosts: all
+  become: true
+  vars_files:
+    - ../vars/default.yml
 
   tasks:
     - name: Creates directory
       file:
-        path: ~/Projects
+        path: "{{ dest_dir }}"
         state: directory
         mode: '0775'
     - name: Clone cacheservice
       git:
         repo: https://github.com/vadymka1/cacheservice.git
-        dest: ~/Projects
+        dest: "{{ dest_dir }}"
         accept_hostkey: yes
-        become: yes
+        key_file: ~/.ssh/id_rsa
     - name: Clone ruby pinger
       git:
         repo: https://github.com/vadymka1/ruby-pinger.git
-        dest: ~/Projects
+        dest: "{{ dest_dir }}"
         accept_hostkey: yes
-        become: yes
+        key_file: ~/.ssh/id_rsa
     - name: Clone ruby jager-rd
       git:
         repo: https://github.com/vadymka1/jager-rd.git
-        dest: ~/Projects
+        dest: "{{ dest_dir }}"
         accept_hostkey: yes
-        become: yes
+        key_file: ~/.ssh/id_rsa
