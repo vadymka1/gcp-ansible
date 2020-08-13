@@ -13,18 +13,18 @@
     - name: Clone cacheservice
       git:
         repo: https://github.com/vadymka1/cacheservice.git
-        dest: "{{ dest_dir }}"
+        dest: "{{ dest_dir }}/cacheservice"
         accept_hostkey: yes
         key_file: ~/.ssh/id_rsa
     - name: Clone ruby pinger
       git:
         repo: https://github.com/vadymka1/ruby-pinger.git
-        dest: "{{ dest_dir }}"
+        dest: "{{ dest_dir }}/ruby-pinger"
         accept_hostkey: yes
         key_file: ~/.ssh/id_rsa
     - name: Clone ruby jager-rd
       git:
         repo: https://github.com/vadymka1/jager-rd.git
-        dest: "{{ dest_dir }}"
+        dest: "{{ dest_dir }}/jager-rd"
         accept_hostkey: yes
         key_file: ~/.ssh/id_rsa
