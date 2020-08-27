@@ -1,0 +1,7 @@
+gcp_project: plenary-axon-283211
+gpc_auth_kind: serviceaccount
+gpc_service_account_file: plenary-axon-283211-82c0155dedbc.json
+gcp_scopes:
+  - https://www.googleapis.com/auth/compute
+zone: us-central1-a
+regiion: us-central1

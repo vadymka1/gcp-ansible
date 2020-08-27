@@ -3,6 +3,7 @@
   become: true
   vars_files:
     - ../vars/default.yml
+    - ../vars/gcp_cred.yml
 
   tasks:
     - name: Creates directory
@@ -12,19 +13,19 @@
         mode: '0775'
     - name: Clone cacheservice
       git:
-        repo: https://github.com/vadymka1/cacheservice.git
+        repo: "{{ cacheservice_repo }}"
         dest: "{{ dest_dir }}/cacheservice"
         accept_hostkey: yes
-        key_file: ~/.ssh/id_rsa
+        key_file: "{{ key_file }}"
     - name: Clone ruby pinger
       git:
-        repo: https://github.com/vadymka1/ruby-pinger.git
+        repo: "{{ ruby_pinger_repo }}"
         dest: "{{ dest_dir }}/ruby-pinger"
         accept_hostkey: yes
-        key_file: ~/.ssh/id_rsa
+        key_file: "{{ key_file }}"
     - name: Clone ruby jager-rd
       git:
-        repo: https://github.com/vadymka1/jager-rd.git
+        repo: "{{ jager_rd_repo }}"
         dest: "{{ dest_dir }}/jager-rd"
         accept_hostkey: yes
-        key_file: ~/.ssh/id_rsa
+        key_file: "{{ key_file }}"

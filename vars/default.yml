@@ -2,4 +2,9 @@ create_containers: 4
 default_container_name: docker
 default_container_image: ubuntu
 default_container_command: sleep 1d
-dest_dir: /var/Projects
+dest_dir: /var/www/Projects
+key_file: ~/.ssh/ansible.pub.pub
+
+cacheservice_repo: https://source.developers.google.com/p/plenary-axon-283211/r/cacheservice
+ruby_pinger_repo: https://source.developers.google.com/p/plenary-axon-283211/r/ruby-pinger
+jager_rd_repo: https://source.developers.google.com/p/plenary-axon-283211/r/jager-rd
