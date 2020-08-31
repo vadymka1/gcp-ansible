@@ -16,6 +16,7 @@
         repo: "{{ cacheservice_repo }}"
         dest: "{{ dest_dir }}/cacheservice"
         accept_hostkey: yes
+        # key_file: ~/.ssh/ansible.pub.pub
         key_file: "{{ key_file }}"
     - name: Clone ruby pinger
       git:

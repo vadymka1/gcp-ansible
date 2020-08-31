@@ -5,7 +5,8 @@
   tasks:
     # - name: Change directory to ruby_pinger
     - name: Build image ruby_pinger
-      chdir: /var/www/Projects/ruby_pinger
+      args:
+        chdir: /var/www/Projects/ruby_pinger
       docker_image:  
         name: ruby_pinger
         build:
@@ -19,7 +20,8 @@
     # - name: Change directory to cacheservice
     #   chdir: /var/www/Projects/cacheservice
     - name: Build image cacheservice
-      chdir: /var/www/Projects/cacheservice
+      args:
+        chdir: /var/www/Projects/cacheservice
       docker_image:
         name: cacheservice
         build:
@@ -30,11 +32,9 @@
       docker_container: 
         name: cacheservice
         image: cacheservice
-    # - name: Change directory to jager_rd
+    # - name: Run container jager
     #   chdir: /var/www/Projects/jager_rd
-    # - name: Run docker-compose
-    #   chdir: /var/www/Projects/jager_rd
-    #   docker_compose: 
+    #   docker_compose:
     #     project_src: /var/www/Projects/jager_rd
-    #   register: output
+
     

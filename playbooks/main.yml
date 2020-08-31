@@ -1,6 +1,6 @@
 ---
 - name: Github
-  import_playbook: github_playbook.yml
+  import_playbook: git_clone_playbook.yml
 - name: Docker
   import_playbook: docker_playbook.yml
 - name: Build and run docker

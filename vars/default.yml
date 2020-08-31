@@ -3,7 +3,8 @@ default_container_name: docker
 default_container_image: ubuntu
 default_container_command: sleep 1d
 dest_dir: /var/www/Projects
-key_file: ~/.ssh/ansible.pub.pub
+# key_file: ~/.ssh/ansible.pub.pub
+key_file: ~/.ssh/google_compute_engine.pub
 
 cacheservice_repo: https://source.developers.google.com/p/plenary-axon-283211/r/cacheservice
 ruby_pinger_repo: https://source.developers.google.com/p/plenary-axon-283211/r/ruby-pinger
